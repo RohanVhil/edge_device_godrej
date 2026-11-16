@@ -1,0 +1,56 @@
+{
+    "devices" :
+    {
+        "growatt" : {
+            "input" : {
+                "param_list" : ["L1_voltage","L2_voltage","L3_voltage","acfreq"]
+            },
+            "holding" : {
+                "param_list" : []
+            }
+
+        },
+        "M70A" : {
+            "input" : {
+                "param_list" : ["L1_voltage","L2_voltage","L3_voltage","acfreq"]
+            },
+            "holding" : {
+                "param_list" : []
+            }
+
+        },
+        "sungrow" : {
+            "input" : {
+                "param_list" : ["L1_voltage","L2_voltage","L3_voltage","acfreq"]
+            },
+            "holding" : {
+                "param_list" : []
+            }
+
+        },
+        "EM6400NG" : {
+            "input" : {
+                "param_list" : []
+            },
+            "holding" : {
+                "param_list" : ["L1_voltage","L2_voltage","L3_voltage","acfreq"]
+            }
+
+        },
+        "battery_pcs" : {
+            "input" : {
+                "param_list" : ["L1_voltage","L2_voltage","L3_voltage","acfreq"]
+            },
+            "holding" : {
+                "param_list" : []
+            }
+
+        }
+    },
+    "param_range" : {
+        "L1_voltage" : [190,600],
+        "L2_voltage" : [190,600],
+        "L3_voltage" : [190,600],
+        "acfreq" : [48,52]
+    }
+}

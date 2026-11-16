@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package enercog.alerts;
+
+import "google/protobuf/wrappers.proto";
+
+message DeviceAlertBatch {
+    repeated DeviceAlertReading device_alerts = 1;
+}
+
+message DeviceAlertReading {
+    uint32 device_id = 1;
+    int64 logged_at = 2;
+    google.protobuf.Int32Value severity = 3;
+    google.protobuf.Int32Value fault_code = 4;
+}

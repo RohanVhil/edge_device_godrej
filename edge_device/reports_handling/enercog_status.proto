@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package enercog.status;
+
+message DeviceStatusBatch {
+    repeated DeviceStatusReading device_statuses = 1;
+}
+
+message DeviceStatusReading {
+    uint32 device_id = 1;
+    int32 device_status = 2;
+    int64 last_updated_at = 3;
+}

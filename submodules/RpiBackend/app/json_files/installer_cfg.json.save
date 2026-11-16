@@ -1,0 +1,139 @@
+{
+    "installer": "Rohan",
+    "number_of_devices": 8,
+    "VPP ID": 255,
+    "site id": "6",
+    "timezone":"Asia/Kolkata",
+    "mqtt server": "test.mqtt.org",
+    "device_list": [
+        {
+            "device_type":"solar-inverter",
+            "device_brand":"SIENG",
+            "part_num":"SG320HX",
+            "device_id":"solar-inverter:SG20RT-P2:I2550300637",
+            "rated_power":"20000",
+            "device_serial_no":"1822060242250044",
+            "comm_type": "modbus-tcp",
+            "num_phases":"3",
+            "phases":"1,2,3",
+            "modbus_tcp_details": {
+                "IP": "192.168.1.254",
+                "port": "502",
+                "slave_id": "4",
+                "part_num":"SG320HX"
+            }  
+        },
+        {
+            "device_type":"solar-inverter",
+            "device_brand":"headspring",
+            "part_num":"battery_pv",
+            "device_id":"solar-inverter:headspring:3709547896",
+            "device_serial_no":"1822060242250044",
+            "comm_type": "modbus-tcp",
+            "num_phases":"3",
+            "phases":"1,2,3",
+            "modbus_tcp_details": {
+                "IP": "192.168.1.103",
+                "port": "503",
+                "slave_id": "1",
+                "part_num":"battery_pv"
+            }  
+        },
+        {
+            "device_type":"meter",
+            "device_brand":"Schneider",
+            "part_num":"EM6400NG",
+            "device_id":"load:EM6400NG:3412843",
+            "device_serial_no":"2412843",
+            "comm_type": "modbus-tcp",
+            "num_phases":"3",
+            "phases":"1,2,3",
+            "modbus_tcp_details": {
+                "IP": "192.168.1.254",
+                "port": "502",
+                "slave_id": "3",
+                "part_num":"EM6400NG"
+            }  
+        },
+        {
+            "device_type":"meter",
+            "device_brand":"Schneider",
+            "part_num":"wms",
+            "device_id":"wms:kwense:798654",
+            "device_serial_no":"2412843",
+            "comm_type": "modbus-tcp",
+            "num_phases":"3",
+            "phases":"1,2,3",
+            "modbus_tcp_details": {
+                "IP": "192.168.1.254",
+                "port": "502",
+                "slave_id": "100",
+                "part_num":"wms"
+            }  
+        },
+        {
+            "device_type":"meter",
+            "device_brand":"headspring",
+            "part_num":"battery_pcs",
+            "device_id":"battery-inverter:headspring:37657896",
+            "device_serial_no":"2412843",
+            "comm_type": "modbus-tcp",
+            "num_phases":"3",
+            "phases":"1,2,3",
+            "modbus_tcp_details": {
+                "IP": "192.168.1.100",
+                "port": "503",
+                "slave_id": "1",
+                "part_num":"battery_pcs"
+            }  
+        },
+        {
+            "device_type":"battery",
+            "device_brand":"headspring",
+            "part_num":"battery_bms",
+            "device_id":"battery-bms:headspring:39147896",
+            "device_serial_no":"2412843",
+            "comm_type": "modbus-tcp",
+            "num_phases":"3",
+            "phases":"1,2,3",
+            "modbus_tcp_details": {
+                "IP": "192.168.1.100",
+                "port": "503",
+                "slave_id": "1",
+                "part_num":"battery_bms"
+            }  
+        },
+        {
+            "device_type":"meter",
+            "device_brand":"headspring",
+            "part_num":"battery_grid",
+            "device_id":"grid:headspring:391098696",
+            "device_serial_no":"2412843",
+            "comm_type": "modbus-tcp",
+            "num_phases":"3",
+            "phases":"1,2,3",
+            "modbus_tcp_details": {
+                "IP": "192.168.1.100",
+                "port": "503",
+                "slave_id": "1",
+                "part_num":"battery_grid"
+            }  
+        },
+        {
+            "device_type":"meter",
+            "device_brand":"headspring",
+            "part_num":"battery_meter",
+            "device_id":"energy-meter:headspring:39148681896",
+            "device_serial_no":"2412843",
+            "comm_type": "modbus-tcp",
+            "num_phases":"3",
+            "phases":"1,2,3",
+            "modbus_tcp_details": {
+                "IP": "192.168.1.100",
+                "port": "503",
+                "slave_id": "1",
+                "part_num":"battery_meter"
+            }  
+        }
+    ]
+}

@@ -1,0 +1,131 @@
+syntax = "proto3";
+
+package enercog.telemetry;
+
+import "google/protobuf/wrappers.proto";
+
+message TelemetryBatch {
+    repeated ComponentReading component_readings = 1;
+    repeated SubcomponentReading subcomponent_readings = 2;
+    repeated WeatherReading weather_readings = 3;
+}
+
+message ComponentReading {
+    uint32 device_id = 1;
+    int64 logged_at = 2;
+
+    google.protobuf.DoubleValue active_power_w = 3;
+    google.protobuf.DoubleValue reactive_power_var = 4;
+    google.protobuf.DoubleValue apparent_power_va = 5;
+    google.protobuf.DoubleValue frequency_hz = 6;
+    google.protobuf.DoubleValue power_factor = 7;
+    google.protobuf.DoubleValue l1_voltage = 8;
+    google.protobuf.DoubleValue l2_voltage = 9;
+    google.protobuf.DoubleValue l3_voltage = 10;
+    google.protobuf.DoubleValue l1_current = 11;
+    google.protobuf.DoubleValue l2_current = 12;
+    google.protobuf.DoubleValue l3_current = 13;
+    google.protobuf.DoubleValue l1_power_w = 14;
+    google.protobuf.DoubleValue l2_power_w = 15;
+    google.protobuf.DoubleValue l3_power_w = 16;
+    google.protobuf.DoubleValue neutral_current_a = 17;
+    google.protobuf.DoubleValue thd_voltage_percent = 18;
+    google.protobuf.DoubleValue thd_current_percent = 19;
+    google.protobuf.DoubleValue input_power_w = 20;
+    google.protobuf.DoubleValue dc_bus_voltage_v = 21;
+    google.protobuf.DoubleValue dc_total_current_a = 22;
+    google.protobuf.DoubleValue insulation_resistance_mohm = 23;
+    google.protobuf.DoubleValue cabinet_temperature_c = 24;
+    google.protobuf.DoubleValue heatsink_temperature_c = 25;
+    google.protobuf.DoubleValue total_energy_kwh = 26;
+    google.protobuf.DoubleValue import_energy_kwh = 27;
+    google.protobuf.DoubleValue export_energy_kwh = 28;
+    google.protobuf.DoubleValue charged_energy_kwh = 29;
+    google.protobuf.DoubleValue discharged_energy_kwh = 30;
+    google.protobuf.DoubleValue oti_c = 31;
+    google.protobuf.DoubleValue wti_c = 32;
+    google.protobuf.DoubleValue fuel_consumed_liters = 33;
+    google.protobuf.DoubleValue engine_speed_rpm = 34;
+    google.protobuf.DoubleValue oil_pressure_kpa = 35;
+    google.protobuf.DoubleValue coolant_temperature_c = 36;
+    google.protobuf.DoubleValue engine_run_hours = 37;
+    google.protobuf.DoubleValue soc_percent = 38;
+    google.protobuf.DoubleValue soh_percent = 39;
+    google.protobuf.DoubleValue internal_temperature_c = 40;
+    google.protobuf.DoubleValue hvac_temperature_c = 41;
+    google.protobuf.DoubleValue available_charging_capacity_kwh = 42;
+    google.protobuf.DoubleValue available_discharging_capacity_kwh = 43;
+    google.protobuf.DoubleValue max_charging_current_limit_a = 44;
+    google.protobuf.DoubleValue max_discharging_current_limit_a = 45;
+    google.protobuf.DoubleValue max_charging_power_limit_kw = 46;
+    google.protobuf.DoubleValue max_discharging_power_limit_kw = 47;
+    google.protobuf.DoubleValue max_cell_voltage_v = 48;
+    google.protobuf.DoubleValue min_cell_voltage_v = 49;
+    google.protobuf.DoubleValue max_cell_temperature_c = 50;
+    google.protobuf.DoubleValue min_cell_temperature_c = 51;
+    google.protobuf.Int32Value cell_num_max_volt = 52;
+    google.protobuf.Int32Value cell_num_min_volt = 53;
+    google.protobuf.Int32Value cell_num_max_temp = 54;
+    google.protobuf.Int32Value cell_num_min_temp = 55;
+    google.protobuf.DoubleValue rotor_speed_rpm = 56;
+    google.protobuf.DoubleValue generator_speed_rpm = 57;
+    google.protobuf.DoubleValue pitch_angle_deg = 58;
+    google.protobuf.DoubleValue yaw_angle_deg = 59;
+    google.protobuf.DoubleValue nacelle_direction_deg = 60;
+    google.protobuf.DoubleValue gearbox_temperature_c = 61;
+    google.protobuf.DoubleValue generator_bearing_temp_c = 62;
+    google.protobuf.DoubleValue nacelle_temperature_c = 63;
+    google.protobuf.DoubleValue vibration_x_mm_s = 64;
+    google.protobuf.DoubleValue vibration_y_mm_s = 65;
+    google.protobuf.Int32Value brake_status = 66;
+    google.protobuf.DoubleValue h2_production_rate_nm3_h = 67;
+    google.protobuf.DoubleValue o2_production_rate_nm3_h = 68;
+    google.protobuf.DoubleValue h2_storage_pressure_bar = 69;
+    google.protobuf.DoubleValue system_pressure_bar = 70;
+    google.protobuf.DoubleValue stack_voltage_v = 71;
+    google.protobuf.DoubleValue stack_current_a = 72;
+    google.protobuf.DoubleValue stack_temperature_c = 73;
+    google.protobuf.DoubleValue electrolyte_level_percent = 74;
+    google.protobuf.DoubleValue cooling_water_flow_l_h = 75;
+    google.protobuf.DoubleValue feed_water_flow_l_h = 76;
+    google.protobuf.DoubleValue h2_purity_percent = 77;
+    google.protobuf.DoubleValue lower_explosive_limit_lel_percent = 78;
+    google.protobuf.Int32Value bms_status = 79;
+}
+
+message WeatherReading {
+    uint32 device_id = 1;
+    int64 logged_at = 2;
+
+    google.protobuf.DoubleValue ambient_temperature_c = 3;
+    google.protobuf.DoubleValue module_temperature_c = 4;
+    google.protobuf.DoubleValue ghi_irradiance_wm2 = 5;
+    google.protobuf.DoubleValue gti_irradiance_wm2 = 6;
+    google.protobuf.DoubleValue dni_irradiance_wm2 = 7;
+    google.protobuf.DoubleValue dhi_irradiance_wm2 = 8;
+    google.protobuf.DoubleValue wind_speed_ms = 9;
+    google.protobuf.DoubleValue wind_direction_deg = 10;
+    google.protobuf.DoubleValue humidity_percent = 11;
+    google.protobuf.DoubleValue barometric_pressure_hpa = 12; 
+    google.protobuf.DoubleValue rain_gauge_mm = 13;
+    google.protobuf.DoubleValue soiling_ratio = 14;          
+    google.protobuf.DoubleValue cloud_cover_percent = 15;
+    google.protobuf.DoubleValue max_wind_speed = 16;
+    google.protobuf.Int64Value max_wind_speed_ts = 17;
+}
+
+message SubcomponentReading {
+    uint32 device_id = 1;
+    uint32 subcomponent_id = 2;
+    uint32 subcomponent_type = 3;
+    int64 logged_at = 4;
+
+    google.protobuf.DoubleValue voltage = 5;
+    google.protobuf.DoubleValue current = 6;
+    google.protobuf.DoubleValue power_w = 7;
+    google.protobuf.DoubleValue temperature_c = 8;
+    google.protobuf.DoubleValue soc_percent = 9;
+    google.protobuf.DoubleValue soh_percent = 10;
+    google.protobuf.DoubleValue energy_kwh = 11;
+    google.protobuf.Int32Value status_code = 12;
+}
